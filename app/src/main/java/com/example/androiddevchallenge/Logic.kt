@@ -4,6 +4,9 @@ fun seconds(totalSeconds: Int): Int = totalSeconds % 60
 fun minutes(totalSeconds: Int): Int = (totalSeconds / 60) % 60
 fun hours(totalSeconds: Int): Int = totalSeconds / 3600
 
+fun hhmmss(totalSeconds: Int) =
+    "%02d:%02d:%02d".format(hours(totalSeconds), minutes(totalSeconds), seconds(totalSeconds))
+
 fun incrementTotalSecondsByHour(totalSeconds: Int) =
     totalSeconds + if (hours(totalSeconds) == 99) -99 * 3600 else 3600
 
