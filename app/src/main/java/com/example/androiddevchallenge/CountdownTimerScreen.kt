@@ -202,7 +202,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                                     }
 
                                     override fun onFinish() {
-                                        TimerState.Stopped
+                                        timerState = TimerState.Stopped
                                     }
                                 }
                             TimerState.Paused
@@ -216,7 +216,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                                     }
 
                                     override fun onFinish() {
-                                        TimerState.Stopped
+                                        timerState = TimerState.Stopped
                                     }
                                 }
                             countDownTimer?.start()
@@ -232,7 +232,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                                     }
 
                                     override fun onFinish() {
-                                        TimerState.Stopped
+                                        timerState = TimerState.Stopped
                                     }
                                 }
                             countDownTimer?.start()
@@ -265,7 +265,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
             Button(
                 onClick = {
                     countDownTimer?.cancel()
-                    remainingTotalSeconds = totalSeconds
+                    remainingTotalSeconds = 0
                     timerState = TimerState.Stopped
                 }
             ) {
