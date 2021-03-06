@@ -11,7 +11,7 @@ This is my practice app using Jetpack Compose for helping people, such as cooks,
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
-* My motivation is to participate in the Android Dev Challenge itself and keep myself up to date by learning Jetpack Compose.
+* My motivation is to enjoy the festive atmosphere of the Android Dev Challenge and keep myself up to date by learning Jetpack Compose.
 * What I am especially proud of is using CircularProgressIndicator, which visually indicates the remaining time.
 
 ## :camera_flash: Screenshots
