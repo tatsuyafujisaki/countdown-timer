@@ -12,7 +12,7 @@ This is my practice app using Jetpack Compose for helping people, such as cooks,
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
 * My motivation is to enjoy the festive atmosphere of the Android Dev Challenge and keep myself up to date by learning Jetpack Compose.
-* What I am especially proud of is using CircularProgressIndicator, which visually indicates the remaining time.
+* What I like about my app is that the play button and the pause button crossfade from each other.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
