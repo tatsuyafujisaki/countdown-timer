@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Button
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
@@ -25,6 +26,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 lateinit var countDownTimer: CountDownTimer
@@ -253,5 +255,20 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                 Text("Reset")
             }
         }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            if (totalSeconds > 0) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(300.dp),
+                    progress = remainingTotalSeconds.toFloat() / totalSeconds,
+                    color = Color.Black,
+                    strokeWidth = 10.dp
+                )
+            }
+        }
     }
 }
+
