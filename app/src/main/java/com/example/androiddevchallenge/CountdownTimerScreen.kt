@@ -44,7 +44,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
-lateinit var countDownTimer: CountDownTimer
+var countDownTimer: CountDownTimer? = null
 
 @Composable
 fun CountDownTimerScreen(modifier: Modifier = Modifier) {
@@ -193,7 +193,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                 onClick = {
                     timerState = when (timerState) {
                         TimerState.Running -> {
-                            countDownTimer.cancel()
+                            countDownTimer?.cancel()
                             countDownTimer =
                                 object :
                                     CountDownTimer(remainingTotalSeconds.toLong() * 1000L, 1000) {
@@ -219,7 +219,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                                         TimerState.Stopped
                                     }
                                 }
-                            countDownTimer.start()
+                            countDownTimer?.start()
                             TimerState.Running
                         }
                         TimerState.Stopped -> {
@@ -235,7 +235,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
                                         TimerState.Stopped
                                     }
                                 }
-                            countDownTimer.start()
+                            countDownTimer?.start()
                             TimerState.Running
                         }
                     }
@@ -264,7 +264,7 @@ fun CountDownTimerScreen(modifier: Modifier = Modifier) {
             }
             Button(
                 onClick = {
-                    countDownTimer.cancel()
+                    countDownTimer?.cancel()
                     remainingTotalSeconds = totalSeconds
                     timerState = TimerState.Stopped
                 }
